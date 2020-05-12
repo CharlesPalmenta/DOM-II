@@ -30,11 +30,11 @@ window.addEventListener('resize', (e)=>{
     e.stopPropagation();
 })
 
-// const buttonColor = document.querySelectorAll('body');
-// window.addEventListener('fullscreenchange', (e)=>{
-//     buttonColor.style.backgroundColor = 'pink';
-//     console.log('full screen', buttonColor)
-// })
+const buttonColor = document.querySelector('.btn');
+buttonColor.addEventListener('auxclick', (e)=>{
+    buttonColor.style.backgroundColor = 'pink';
+    console.log('full screen', buttonColor)
+})
 
 // const backGround = document.querySelectorAll('body');
 // backGround.addEventListener('wheel', (e)=>{
@@ -59,4 +59,9 @@ function zoom(event) {
   
   el.addEventListener('wheel', zoom);
 
-  
+
+const bottomImage = document.querySelector('.content-destination img')
+bottomImage.addEventListener('drag', (event)=>{
+    alert('Can not be dragged!');
+})
+
